@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title bg="favorite">LOGIN</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="login-container">
+  <div class="overlay"></div>
+  <form [formGroup]="userForm" (ngSubmit)="login()" class="app-padding-content">
+    <ion-item color="transparent"  >
+      <!-- <ion-label position="floating">Email</ion-label> -->
+      <ion-input  formControlName="email"  class="form-input" type="text" placeholder="email" required></ion-input>
+    </ion-item>
+
+    <ion-item color="transparent">
+      <!-- <ion-label position="floating">Password</ion-label> -->
+      <ion-input  formControlName="password"  class="form-input" placeholder="password" type="password" required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <button type="submit" class="btn btn-primary btn-block green btn-login" color="danger" expand="block">LOGIN</button>
+        <!-- <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a> -->
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

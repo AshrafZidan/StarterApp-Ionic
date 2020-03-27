@@ -1,0 +1,71 @@
+#inbox-list{
+    background: transparent;
+
+
+.itemList{
+
+    &:first-child{        
+    border-radius: 25px;
+    color: #fff;
+    background-color: #001b1d;
+    position: relative;
+    top: 0;
+    // left: 10px;
+    // right: 10px;
+    }&:nth-child(2){
+        // margin-top: 80px;
+
+    }
+    h2{
+        font-weight: 600;
+    }
+    .item-inner{
+      border: 0 !important;
+    }
+  }
+}
+.menuList{
+    color: #060606 !important;
+    text-align: right;
+    border-bottom: 0 !important;
+    .item-inner{
+    border-bottom: 0 !important;
+    --border: 0;
+        
+    }
+    ion-label{
+        margin: 5px 0;
+        h3{
+            font-size: 18px;
+    font-weight: 700;
+    margin: 1px 0px;
+        }
+        p{
+            color: #001a1c;
+
+        }
+    }
+}
+.options{
+    position: absolute;
+    top: 8px;
+    font-size: 22px;
+    left: -2px;
+
+       span:nth-child(2){
+        margin: 0 5px;
+        font-size: 17px;
+        display: inline-block;
+       }
+       ion-icon{
+        margin: -4px 0;
+       }
+
+
+}
+.fixed-button{
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}

@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="login-container">
+  <div class="overlay"></div>
+  <ion-list id="inbox-list">
+
+  <ion-item class="itemList" color="transparent" lines="none">
+    <ion-label>Restaurants</ion-label>
+    <ion-select  name="restaurantSelect" [disabled]="userRole"  (ionChange)="changeRestaurant($event)" [ngModel]="selectedRestaurant.restaurantId" placeholder="Select One">
+      <ion-select-option   *ngFor="let rest of restaurantList" [value]="rest.restaurantId">{{rest.name}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+
+  <ion-item   *ngFor="let menu of menuList"  lines="none" class="itemList menuList" color="transparent">
+    <ion-label>
+      <h3>{{menu.name}}</h3>
+      <p> <span> جنية </span> <span> {{menu.price}} </span>  </p>
+      <div class="options">
+          <ion-icon  (click)="minus(menu)" slot="start" name="remove-circle-outline"></ion-icon>
+         <span>{{menu.count}}</span>
+        <ion-icon (click)="add(menu)" slot="start" name="add-circle-outline"></ion-icon>
+
+      </div>
+    </ion-label>
+  </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" color="warning" class="fixed-button">Continue</ion-button>
+
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>add Menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="login-container">
+  <form [formGroup]="menuForm" (ngSubmit)="add()" class="app-padding-content">
+    <div class="overlay"></div>
+    <ion-item color="transparent">
+      <ion-label>Restaurants</ion-label>
+      <ion-select formControlName="restaurantName"  placeholder="Select One">
+        <ion-select-option *ngFor="let rest of restaurantList" value="{{rest.name}}">{{rest.name}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item color="transparent">
+      <!-- <ion-label position="floating">Email</ion-label> -->
+      <ion-input formControlName="name"  class="form-input" type="text" placeholder="name" required></ion-input>
+    </ion-item>
+
+    <ion-item color="transparent">
+      <!-- <ion-label position="floating">Email</ion-label> -->
+      <ion-input formControlName="price"  class="form-input" type="number" placeholder="Price" required></ion-input>
+    </ion-item>
+
+    <ion-item color="transparent"  >
+      <!-- <ion-label position="floating">Email</ion-label> -->
+      <ion-input formControlName="description"  class="form-input" type="text" placeholder="description"></ion-input>
+    </ion-item>
+
+ 
+
+    <ion-row>
+      <ion-col>
+ 
+        <button type="submit" class="btn btn-primary btn-block green btn-login" color="danger" expand="block">Add</button>
+        <!-- <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a> -->
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

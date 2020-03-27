@@ -1,0 +1,25 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="text-center">
+      Asset Ftar 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-form login-container">
+  <div class="overlay"></div>
+  <ion-grid class="form-content">
+    <ion-row>
+      <ion-col align-self-center>
+        <button [routerLink]="['/registration']" expand="block" class="btn btn-block btn-primary yellow">Register</button>
+
+        <span class="divider line one-line">or</span>
+
+        <span class="already">Already a user?</span>
+
+        <button [routerLink]="['/login']" expand="block" class="btn btn-block btn-primary green" >Sign In</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
